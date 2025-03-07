@@ -1,14 +1,67 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  	<title>Elisei</title>
-  </head>
-  <body>
-  	<header>
-  		<h1>Elisei</h1>
-  	</header>
-  	<nav>
-  		<a href="index.html">Home</a>
-  	</nav>
-  </body>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description"
+			content="Angelo Carter's Art Gallery showcasing a collection of paintings spanning more than 60 years.">
+		<title>Angelo Carter</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+
+	<body>
+		<header>
+			<img class="logo" src="angelo-logo.jpeg" alt="Angelo Carter Company Logo">
+			<h1>Angelo Carter</h1>
+		</header>
+		<nav>
+			<a href="index.html" aria-label="Home">Home</a>
+			<a href="gallery.html" aria-label="Gallery">Gallery</a>
+			<a href="expo.html" aria-label="Expo">Expo</a>
+			<a href="login.html" aria-label="Login">Login</a>
+		</nav>
+
+		<div class="flex_container">
+			<section class="flex_child">
+				<div class="slideshow-container">
+					<div class="mySlides fade">
+						<img src="antique_web.jpg" alt="Antique Art" style="width:100%">
+						<div class="text">Antique</div>
+					</div>
+					<div class="mySlides fade">
+						<img src="flowers_web.jpg" alt="Flowers Art" style="width:100%">
+						<div class="text">Flowers</div>
+					</div>
+					<div class="mySlides fade">
+						<img src="trees_web.jpg" alt="Trees Art" style="width:100%">
+						<div class="text">Trees</div>
+					</div>
+				</div>
+			</section>
+			<section class="welcome-text flex_child">
+				<h1>Angelo's Art Gallery History</h1>
+				<p>The Angelo Art Gallery's collection of paintings spans more than 60 years
+					and styles range from classic to modern.
+					We also hold an exhibition of an up and coming local artist each and every
+					month.
+					Thanks to the budding young talent in our local area these events are
+					always popular.
+					No ticket required just arrive on the day.
+					The building that houses the gallery opened its doors to the public in 1996
+					for the Northamptonshire Fine Art Exhibition inspired by the Great
+					Exhibition in London of 1851.
+					In 1996 it became the Angelo Art Gallery.
+					The Angelo Art Gallery holds the largest collection of work by local
+					talent, showing many of these paintings and sketches alongside loans from
+					other larger galleries.</p>
+			</section>
+		</div>
+
+		<footer>
+			<p>&copy; 2025 Angelo Carter's Art Gallery. All rights reserved.</p>
+		</footer>
+		<script src="script.js"></script>
+	</body>
+
 </html>
