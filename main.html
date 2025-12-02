@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elisei Bobocea | CV</title>
+    <style>
+        /* --- THEME SETTINGS (DARK MODE) --- */
+        :root {
+            --primary-color: #60a5fa; /* Bright blue for contrast */
+            --bg-body: #0f172a;       /* Deep slate background */
+            --bg-card: #1e293b;       /* Lighter slate card */
+            --text-main: #f8fafc;     /* White text */
+            --text-secondary: #94a3b8; /* Grey text */
+            --tag-bg: #334155;        /* Dark grey for skills */
+            --tag-text: #e2e8f0;      /* Light text for skills */
+            --container-width: 800px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        /* --- THE MAIN CARD --- */
+        .cv-container {
+            background-color: var(--bg-card);
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* --- HEADER SECTION --- */
+        header {
+            text-align: center;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+
+        .profile-pic {
+            /* UPDATED: Larger dimensions */
+            width: 220px;
+            height: 280px;
+            border-radius: 20px; /* Rounded corners */
+            object-fit: cover;
+            border: 4px solid #334155;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            margin-bottom: 25px;
+            background-color: #334155;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            color: var(--text-main);
+            letter-spacing: -1px;
+        }
+
+        .job-title {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .location {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+        }
+
+        .summary {
+            max-width: 650px;
+            margin: 0 auto 30px auto;
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        /* --- EMAIL BUTTON --- */
+        .email-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #0f172a;
+            padding: 14px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .email-btn:hover {
+            background-color: #93c5fd;
+            transform: translateY(-2px);
+        }
+
+        /* --- SECTIONS --- */
+        .section-title {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-main);
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        /* --- WORK & EDUCATION ITEMS --- */
+        .job-item, .edu-item {
+            margin-bottom: 40px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .job-role {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .job-company {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .job-date {
+            font-family: monospace;
+            color: var(--text-secondary);
+            background: #0f172a;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            border: 1px solid #334155;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: #cbd5e1;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* --- SKILLS GRID --- */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border: 1px solid #475569;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        
+        .skill-tag:hover {
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+        /* --- MOBILE TWEAKS --- */
+        @media (max-width: 600px) {
+            .cv-container { padding: 30px 20px; }
+            h1 { font-size: 2.2rem; }
+            .profile-pic { width: 100%; max-width: 220px; height: auto; aspect-ratio: 3/4; }
+            .job-header { flex-direction: column; gap: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <header>
+            <img src="elisei.png" alt="Elisei Bobocea" class="profile-pic">
+            
+            <h1>Elisei P. Bobocea</h1>
+            <div class="job-title">Senior IT Lecturer & Curriculum Coordinator</div>
+            <div class="location">Kettering, United Kingdom</div>
+            
+            <p class="summary">
+                Senior IT Lecturer and Curriculum Coordinator with a strong foundation in software engineering and digital technologies. 
+                Combines advanced pedagogical skills with technical expertise in <strong>C++, C#, Python, and Unreal Engine 5</strong>. 
+                Proven track record of managing T-Level Digital curriculums and BTEC frameworks across Levels 1-5. 
+                Delivers high-impact instruction that bridges the gap between complex code and learner understanding, 
+                evidenced by a 96% student achievement rate.
+            </p>
+
+            <a href="mailto:elisei@elisei.co.uk" class="email-btn">Email Me</a>
+        </header>
+
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">Web Server Management</span>
+            <span class="skill-tag">Mobile App Dev (SWIFT)</span>
+            <span class="skill-tag">Game Development (UE 5)</span>
+            <span class="skill-tag">SQL / Databases</span>
+        </div>
+
+        <h2 class="section-title">Work Experience</h2>
+
+        <div class="job-item">
+            <div class="job-header">
+                <div>
+                    <span class="job-role">IT Lecturer with Coordination Duties</span>
+                    <span class="job-company"> @ Northampton College</span>
+                </div>
+                <span class="job-date">Oct 2024 - Present</span>
+            </div>
+            <ul>
+                <li>Responsible for T-Level Digital course organisation and curriculum development.</li>
+                <li>Plan learning programmes, set targets, and guide students through the learning process (Levels 1-5).</li>
+                <li>Prepare essential documents including assessment plans, schemes of work, and lesson plans.</li>
+                <li>Maintain accurate records of student retention, achievement, and attendance using e-registers.</li>
+            </ul>
+        </div>
+
+        <div class="job-item">
+            <div class="job-header">
+                <div>
+                    <span class="job-role">IT Lecturer</span>
+                    <span class="job-company"> @ Northampton College</span>
+                </div>
+                <span class="job-date">Oct 2020 - Sep 2024</span>
+            </div>
+            <ul>
+                <li>Lead lecturer tasked with preparing curriculum and assessment schedules for the entire academic year (Levels 1-5).</li>
+                <li>Taught Level 4 Computer Science, sharing skills in programming concepts, C++ syntax, and algorithms.</li>
+                <li>Created sampling plans, verified assignment briefs internally, and standardised student work.</li>
+                <li>Developed practical assignments and projects to engage students.</li>
+            </ul>
+        </div>
+
+        <div class="job-item">
+            <div class="job-header">
+                <div>
+                    <span class="job-role">IT Lecturer</span>
+                    <span class="job-company"> @ Aylesbury College</span>
+                </div>
+                <span class="job-date">May 2018 - Sep 2020</span>
+            </div>
+            <ul>
+                <li>Served as Lead Internal Verifier for BTEC, preparing curriculum and assessment schedules for Levels 1-3.</li>
+                <li>Achieved a 96% success rate with 90% of students achieving D*D*D*, and an 87% retention rate.</li>
+                <li>Created sampling plans and allocated Internal Verification duties to the team.</li>
+                <li>Focused on motivating students and ensuring ALPS rose from any level up to level 1.</li>
+            </ul>
+        </div>
+
+        <div class="job-item">
+            <div class="job-header">
+                <div>
+                    <span class="job-role">IT Lecturer (PGCE Placement)</span>
+                    <span class="job-company"> @ Harrow College, London</span>
+                </div>
+                <span class="job-date">Oct 2017 - Apr 2018</span>
+            </div>
+            <ul>
+                <li>Allocated by UCL as part of the PGCE program; developed from a trainee to a lecturer capable of independent teaching.</li>
+                <li>Achieved a very high pass rate, noted as a first for the college context.</li>
+                <li>Built strong relationships with students to enable them to achieve their highest potential.</li>
+            </ul>
+        </div>
+
+        <div class="job-item">
+            <div class="job-header">
+                <div>
+                    <span class="job-role">3D Technician and Teacher</span>
+                    <span class="job-company"> @ Camp America, PA</span>
+                </div>
+                <span class="job-date">May 2017 - Aug 2017</span>
+            </div>
+            <ul>
+                <li>Developed and delivered engaging lessons to children aged 7-16.</li>
+                <li>Supervised student printing work and guided them in using technology.</li>
+            </ul>
+        </div>
+
+         <div class="job-item">
+            <div class="job-header">
+                <div>
+                    <span class="job-role">IT Technician</span>
+                    <span class="job-company"> @ PC Callout Limited</span>
+                </div>
+                <span class="job-date">Sep 2016 - Mar 2017</span>
+            </div>
+            <ul>
+                <li>Resolved hardware, software, printing, and operating system issues.</li>
+                <li>Built and repaired computer systems, laptops, and servers.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="edu-item">
+            <div class="job-header">
+                <div>
+                    <span class="job-role">PGCE Post-Compulsory</span>
+                    <span class="job-company"> @ UCL, London</span>
+                </div>
+                <span class="job-date">2017 - 2018</span>
+            </div>
+        </div>
+
+        <div class="edu-item">
+            <div class="job-header">
+                <div>
+                    <span class="job-role">Bachelor's in Theology and Religious Studies</span>
+                    <span class="job-company"> @ St Mary's University, London</span>
+                </div>
+                <span class="job-date">2014 - 2017</span>
+            </div>
+        </div>
+
+        <div class="edu-item">
+            <div class="job-header">
+                <div>
+                    <span class="job-role">Computing & IT L3 Extended Diploma (DMM)</span>
+                    <span class="job-company"> @ BSix Sixth Form College</span>
+                </div>
+                <span class="job-date">2011 - 2013</span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
